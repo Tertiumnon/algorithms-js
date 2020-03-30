@@ -9,11 +9,18 @@
  * @param {TreeNode} root
  * @return {number}
  */
-const maxDepth = function(root) {
-  console.log(root);
-  let context = [];
-  let node = { ...root };
-  getNodes(context, root);
+const maxDepth = (root) => {
+  if (root === null) {
+    return 0;
+  }
+  const res = [0, 0];
+  if (root.left) {
+    res[0] += maxDepth(root.left);
+  }
+  if (root.right) {
+    res[1] += maxDepth(root.right);
+  }
+  return Math.max(res[0], res[1]) + 1;
 };
 
-console.log(maxDepth([3, 9, 20, null, null, 15, 7]));
+module.exports = maxDepth;

@@ -1,8 +1,9 @@
 {
     "env": {
-        "commonjs": true,
+        "browser": true,
         "es6": true,
-        "node": true
+        "node": true,
+        "jasmine": true
     },
     "extends": "airbnb-base",
     "globals": {
@@ -10,9 +11,11 @@
         "SharedArrayBuffer": "readonly"
     },
     "parserOptions": {
-        "ecmaVersion": 2018
+        "ecmaVersion": 2018,
+        "sourceType": "module"
     },
     "rules": {
-        "no-undef":"off"
+        "func-names":"off",
+        "prefer-arrow-callback":"off"
     }
 }
