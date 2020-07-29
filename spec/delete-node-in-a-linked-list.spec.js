@@ -1,4 +1,4 @@
-const fn = require('./delete-node-in-a-linked-list');
+const fn = require('../leetcode/delete-node-in-a-linked-list');
 
 describe('leetcode deleteNode', function () {
   it('case 1', function () {
