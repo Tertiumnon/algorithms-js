@@ -1,7 +1,7 @@
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
     basePath: './spec',
-    frameworks: ['jasmine']
-    //...
+    frameworks: ['jasmine'],
+    files: ['*.spec.js'],
   });
 };
