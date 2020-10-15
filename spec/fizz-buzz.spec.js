@@ -1,4 +1,4 @@
-const fizzBuzz = require('./fizz-buzz');
+const fizzBuzz = require('../leetcode/fizz-buzz');
 
 describe('leetcode fizz-buzz', () => {
   it('case 1', () => {

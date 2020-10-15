@@ -1,4 +1,4 @@
-const fn = require('./reverse-string');
+const fn = require('../leetcode/reverse-string');
 
 describe('testing', function () {
   it('case 1', function () {

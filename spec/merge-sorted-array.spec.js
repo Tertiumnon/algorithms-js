@@ -1,4 +1,4 @@
-const fn = require('./merge-sorted-array');
+const fn = require('../leetcode/merge-sorted-array');
 
 describe('test', () => {
   it('case 1', () => {
