@@ -1,6 +1,10 @@
-var singleNumber = function(nums) {
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+const singleNumber = (nums) => {
   const res = new Set();
-  nums.forEach(n => {
+  nums.forEach((n) => {
     if (res.has(n)) {
       res.delete(n);
     } else {
@@ -10,4 +14,4 @@ var singleNumber = function(nums) {
   return res.values().next().value;
 };
 
-console.log(singleNumber([2,2,1]));
+module.exports = singleNumber;
