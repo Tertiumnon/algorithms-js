@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "create": "node create.js",
     "test": "npx jasmine"
   },
   "author": "Vit Tertiumnon",
