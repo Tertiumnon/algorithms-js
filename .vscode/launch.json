@@ -10,7 +10,7 @@
       "name": "Jasmine",
       "program": "${workspaceFolder}/node_modules/jasmine/bin/jasmine",
       "args": [
-        "${workspaceFolder}/leetcode/add-two-numbers.spec.js"
+        "${workspaceFolder}/spec/contains-duplicate.spec.js"
       ],
       "skipFiles": [
         "<node_internals>/**"

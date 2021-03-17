@@ -10,16 +10,21 @@ if (process.argv.length < 3) {
 const name = process.argv[2];
 const dir = process.argv[3];
 
+const camelToSnakeCase = (str) => {
+  str.replace(/[A-Z]/g, (letter) => `_${letter.toLowerCase()}`);
+};
+
+const filename = camelToSnakeCase(name);
+
 // create fn
 
 const fnContent = `const ${name} = () => {
 };
 
 module.exports = ${name};
-
 `;
 
-fs.writeFile(`./${dir}/${name}.js`, fnContent, (err) => {
+fs.writeFile(`./${dir}/${filename}.js`, fnContent, (err) => {
   if (err) {
     return console.error(err.message);
   }
@@ -28,7 +33,8 @@ fs.writeFile(`./${dir}/${name}.js`, fnContent, (err) => {
 
 // create spec
 
-const specContent = `const fn = require('../${dir}/${name}');
+const specContent = `const fn = require('../${dir}/${filename}');
+
 describe('testing ${name}', () => {
   it('case 1', () => {
     // const expectedRes = ;
@@ -38,7 +44,7 @@ describe('testing ${name}', () => {
 });
 `;
 
-fs.writeFile(`./spec/${name}.spec.js`, specContent, (err) => {
+fs.writeFile(`./spec/${filename}.spec.js`, specContent, (err) => {
   if (err) {
     return console.error(err.message);
   }
