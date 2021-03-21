@@ -10,15 +10,12 @@ if (process.argv.length < 3) {
 const name = process.argv[2];
 const dir = process.argv[3];
 
-const camelToSnakeCase = (str) => {
-  str.replace(/[A-Z]/g, (letter) => `_${letter.toLowerCase()}`);
-};
-
-const filename = camelToSnakeCase(name);
+const filename = name.replace(/[A-Z]/g, (letter) => `-${letter.toLowerCase()}`);
 
 // create fn
 
 const fnContent = `const ${name} = () => {
+  
 };
 
 module.exports = ${name};
@@ -37,9 +34,9 @@ const specContent = `const fn = require('../${dir}/${filename}');
 
 describe('testing ${name}', () => {
   it('case 1', () => {
-    // const expectedRes = ;
-    // const res = fn();
-    // expect(expectedRes).toEqual(res);
+    const expectedRes = ;
+    const res = fn();
+    expect(expectedRes).toEqual(res);
   });
 });
 `;
