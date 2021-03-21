@@ -4,7 +4,6 @@
  * @return {number[]}
  */
 const twoSum = (nums, target) => {
-  const res = [];
   const len = nums.length;
   for (let i = 0; i < len; i += 1) {
     const item = nums[i];
