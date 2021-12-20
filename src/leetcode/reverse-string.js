@@ -4,13 +4,13 @@
  */
 const reverseString = (s) => {
   const len = s.length;
-  const res = [...s];
+  const result = [...s];
   for (let i = 0; i < len / 2; i += 1) {
-    const el = res[i];
-    res[i] = res[len - i - 1];
-    res[len - i - 1] = el;
+    const el = result[i];
+    result[i] = result[len - i - 1];
+    result[len - i - 1] = el;
   }
-  return res;
+  return result;
 };
 
 module.exports = reverseString;

@@ -3,7 +3,7 @@
  * @return {number}
  */
 var maxProfit = function(prices) {
-  const res = [];
+  const result = [];
   const temp = [];
   const usedItems = [];
   const itemsLen = prices.length;
@@ -16,12 +16,12 @@ var maxProfit = function(prices) {
       if (profit > 0 && !(usedItems.includes(i) || usedItems.includes(j))) {
         usedItems.push(i);
         usedItems.push(j);
-        res.push(profit);
+        result.push(profit);
       }
     }
   }
   console.log(usedItems);
-  return res.reduce((sum, item) => sum += item);
+  return result.reduce((sum, item) => sum += item);
 };
 
 // console.log(maxProfit([7,1,5,3,6,4]));

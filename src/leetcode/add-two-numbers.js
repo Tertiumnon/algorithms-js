@@ -15,9 +15,9 @@ class ListNode {
  * @return {ListNode}
  */
 const addTwoNumbers = (l1, l2) => {
-  const res = new ListNode();
+  const result = new ListNode();
   let addVal = 0;
-  let resNode = res;
+  let resNode = result;
   let l1node = l1;
   let l2node = l2;
   while ((l1node && l1node.val >= 0) || (l2node && l2node.val >= 0) || addVal) {
@@ -39,7 +39,7 @@ const addTwoNumbers = (l1, l2) => {
     l1node = l1node && l1node.next !== null ? l1node.next : null;
     l2node = l2node && l2node.next !== null ? l2node.next : null;
   }
-  return res;
+  return result;
 };
 
 module.exports = addTwoNumbers;

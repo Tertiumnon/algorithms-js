@@ -2,7 +2,7 @@
 
 // describe('leetcode add-two-numbers', () => {
 //   it('case 1', () => {
-//     const expectedRes = {
+//     const expectedResult = {
 //       val: 7,
 //       next: {
 //         val: 0,
@@ -32,6 +32,6 @@
 //         },
 //       },
 //     };
-//     expect(expectedRes).toEqual(fn(l1, l2));
+//     expect(expectedResult).toEqual(fn(l1, l2));
 //   });
 // });

@@ -1,8 +1,8 @@
-const fizzBuzz = require('../leetcode/fizz-buzz');
+const fizzBuzz = require('./fizz-buzz');
 
 describe('leetcode fizz-buzz', () => {
   it('case 1', () => {
-    const expectedRes = [
+    const expectedResult = [
       '1',
       '2',
       'Fizz',
@@ -19,7 +19,7 @@ describe('leetcode fizz-buzz', () => {
       '14',
       'FizzBuzz',
     ];
-    const res = fizzBuzz(15);
-    expect(expectedRes).toEqual(res);
+    const result = fizzBuzz(15);
+    expect(result).toEqual(expectedResult);
   });
 });

@@ -12,7 +12,7 @@
  * @return {string[]}
  */
 const fizzBuzz = (n) => {
-  const res = [];
+  const result = [];
   let i = 1;
   while (i <= n) {
     let r = '';
@@ -27,10 +27,10 @@ const fizzBuzz = (n) => {
     } else {
       r = String(i);
     }
-    res.push(r);
+    result.push(r);
     i += 1;
   }
-  return res;
+  return result;
 };
 
 module.exports = fizzBuzz;

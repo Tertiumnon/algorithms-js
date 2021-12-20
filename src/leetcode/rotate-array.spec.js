@@ -1,4 +1,4 @@
-const fn = require('../leetcode/rotate-array');
+const fn = require('./rotate-array');
 
 describe('testing', function () {
   it('case 1', function () {

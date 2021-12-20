@@ -1,4 +1,4 @@
-const maxDepth = require('../leetcode/maximum-depth-of-binary-tree');
+const maxDepth = require('./maximum-depth-of-binary-tree');
 
 describe('leetcode maximum-depth-of-binary-tree', function () {
   it('case 1', function () {

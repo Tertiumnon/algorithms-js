@@ -10,7 +10,7 @@
       "name": "Jasmine",
       "program": "${workspaceFolder}/node_modules/jasmine/bin/jasmine",
       "args": [
-        "${workspaceFolder}/spec/intersection-of-two-arrays2.spec.js"
+        "${workspaceFolder}/src/{{path}}.spec.js"
       ],
       "skipFiles": [
         "<node_internals>/**"

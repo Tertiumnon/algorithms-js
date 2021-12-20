@@ -1,4 +1,4 @@
-const fn = require('../leetcode/valid-palindrome');
+const fn = require('./valid-palindrome');
 
 describe('testing', function () {
   it('case 1', function () {

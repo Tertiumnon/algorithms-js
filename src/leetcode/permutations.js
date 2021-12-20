@@ -18,7 +18,7 @@ Output:
 // const changeOrder = (arr) => {
 //   for (let i = 0; i < arr.length; i++) {
 //     const newArr = changeOrder(arr.slice(0));
-//     res = [...newArr];
+//     result = [...newArr];
 //   }
 //   return
 // };
@@ -28,7 +28,7 @@ Output:
  * @return {number[][]}
  */
 const permute = (nums) => {
-  let res = [];
+  let result = [];
   if (nums.length === 1) {
     return [nums];
   }
@@ -39,10 +39,10 @@ const permute = (nums) => {
     for (let j = 0; j <= rightLeft.length; j += 1) {
       const pre = rightLeft.slice(0, j);
       const suf = rightLeft.slice(j);
-      res.push(pre.concat([left], suf))
+      result.push(pre.concat([left], suf))
     }
   }
-  return res;
+  return result;
 };
 
 console.log(permute([1, 2, 3]));

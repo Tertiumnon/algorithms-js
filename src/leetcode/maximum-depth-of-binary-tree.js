@@ -13,14 +13,14 @@ const maxDepth = (root) => {
   if (root === null) {
     return 0;
   }
-  const res = [0, 0];
+  const result = [0, 0];
   if (root.left) {
-    res[0] += maxDepth(root.left);
+    result[0] += maxDepth(root.left);
   }
   if (root.right) {
-    res[1] += maxDepth(root.right);
+    result[1] += maxDepth(root.right);
   }
-  return Math.max(res[0], res[1]) + 1;
+  return Math.max(result[0], result[1]) + 1;
 };
 
 module.exports = maxDepth;

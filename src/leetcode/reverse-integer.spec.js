@@ -1,4 +1,4 @@
-const fn = require('../leetcode/reverse-integer');
+const fn = require('./reverse-integer');
 
 describe('testing', function () {
   it('-123 => -321', function () {

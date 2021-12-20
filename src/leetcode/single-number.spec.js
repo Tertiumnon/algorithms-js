@@ -1,4 +1,4 @@
-const fn = require('../leetcode/single-number');
+const fn = require('./single-number');
 
 describe('testing', function () {
   it('case 1', function () {

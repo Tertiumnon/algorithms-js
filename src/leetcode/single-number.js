@@ -3,15 +3,15 @@
  * @return {number}
  */
 const singleNumber = (nums) => {
-  const res = new Set();
+  const result = new Set();
   nums.forEach((n) => {
-    if (res.has(n)) {
-      res.delete(n);
+    if (result.has(n)) {
+      result.delete(n);
     } else {
-      res.add(n);
+      result.add(n);
     }
   });
-  return res.values().next().value;
+  return result.values().next().value;
 };
 
 module.exports = singleNumber;
