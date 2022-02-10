@@ -21,7 +21,7 @@ const fnContent = `const ${name} = () => {
 module.exports = ${name};
 `;
 
-fs.writeFile(`./${dir}/${filename}.js`, fnContent, (err) => {
+fs.writeFile(`./src/${dir}/${filename}.js`, fnContent, (err) => {
   if (err) {
     return console.error(err.message);
   }
@@ -34,13 +34,13 @@ const specContent = `const ${name} = require('../${dir}/${filename}');
 
 describe('testing ${name}', () => {
   it('case 1', () => {
-    const res = ${name}();
-    expect().toEqual(res);
+    const result = ${name}();
+    expect(result).toEqual();
   });
 });
 `;
 
-fs.writeFile(`./spec/${filename}.spec.js`, specContent, (err) => {
+fs.writeFile(`./src/${dir}/${filename}.spec.js`, specContent, (err) => {
   if (err) {
     return console.error(err.message);
   }
