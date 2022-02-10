@@ -30,13 +30,12 @@ fs.writeFile(`./${dir}/${filename}.js`, fnContent, (err) => {
 
 // create spec
 
-const specContent = `const fn = require('../${dir}/${filename}');
+const specContent = `const ${name} = require('../${dir}/${filename}');
 
 describe('testing ${name}', () => {
   it('case 1', () => {
-    const expectedRes = ;
-    const res = fn();
-    expect(expectedRes).toEqual(res);
+    const res = ${name}();
+    expect().toEqual(res);
   });
 });
 `;

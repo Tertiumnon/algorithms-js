@@ -5,23 +5,25 @@
   "main": "index.js",
   "scripts": {
     "create": "node create.js",
-    "test": "npx jasmine"
+    "jasmine": "jasmine",
+    "karma": "karma start"
   },
   "author": "Vit Tertiumnon",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-standard": "^14.1.1",
-    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
-    "jasmine": "^3.5.0",
-    "jasmine-core": "^3.5.0",
+    "eslint-plugin-promise": "^4.3.1",
+    "eslint-plugin-standard": "^4.1.0",
+    "jasmine": "^3.10.0",
+    "jasmine-core": "^3.10.0",
     "karma": "^4.4.1",
     "karma-chrome-launcher": "^3.1.0",
-    "karma-jasmine": "^3.1.1"
+    "karma-jasmine": "^3.3.1",
+    "puppeteer": "^10.4.0"
   },
   "dependencies": {}
 }
