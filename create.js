@@ -30,7 +30,7 @@ fs.writeFile(`./src/${dir}/${filename}.js`, fnContent, (err) => {
 
 // create spec
 
-const specContent = `const ${name} = require('../${dir}/${filename}');
+const specContent = `const ${name} = require('./${filename}');
 
 describe('testing ${name}', () => {
   it('case 1', () => {
