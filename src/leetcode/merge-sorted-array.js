@@ -31,7 +31,7 @@ const merge = (nums1, m, nums2, n) => {
       }
       if (nums1lastItem >= nums2lastItem) {
         nums1[nums1Len - 1 - i] = nums1lastItem;
-        nums1[nums1I - i] = undefined;
+        nums1[nums1I - i] = nums2[nums2Len - nums2I + 1];
         nums2I += 1;
       } else {
         nums1[nums1Len - 1 - i] = nums2lastItem;
