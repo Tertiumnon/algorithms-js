@@ -1,19 +1,19 @@
-/* eslint-disable no-param-reassign */
 /**
  * Definition for singly-linked list.
  */
-function ListNode(val) {
-  this.val = val;
-  this.next = null;
+const ListNode = val => {
+  this.val = val
+  this.next = null
 }
+
 /**
  * @param {ListNode} node
  * @return {void} Do not return anything, modify node in-place instead.
  */
-const deleteNode = (node) => {
-  node.val = node.next.val;
-  node.next = node.next.next;
-  return node;
-};
+const deleteNode = (node: ListNode) => {
+  node.val = node.next.val
+  node.next = node.next.next
+  return node
+}
 
-module.exports = deleteNode;
+export default deleteNode

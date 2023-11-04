@@ -4,28 +4,29 @@
  * @returns { Array }
  */
 const flat = (arr, depth = 1) => {
-  const result = [];
-  let realDepth = depth;
-  let arrLength = arr.length;
+  const result = []
+  let realDepth = depth
+  let arrLength = arr.length
   for (let i = 0; i < arrLength; i += 1) {
-    const item = arr[i];
+    const item = arr[i]
     if (item instanceof Array && realDepth > 0) {
-      const itemLength = item.length;
+      const itemLength = item.length
       for (let j = 0; j < itemLength; j += 1) {
-        const jItem = item[j];
+        const jItem = item[j]
         if (j > 0) {
-          i += 1;
-          arrLength += 1;
+          i += 1
+          arrLength += 1
         }
-        result.push(jItem);
+        result.push(jItem)
       }
     } else {
-      result.push(item);
+      result.push(item)
     }
   }
-  realDepth -= 1;
+  realDepth -= 1
   return realDepth > 0 && result.some((item) => item instanceof Array)
-    ? flat(result, realDepth) : result;
-};
+    ? flat(result, realDepth)
+    : result
+}
 
-module.exports = flat;
+export default flat

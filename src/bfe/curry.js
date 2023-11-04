@@ -4,19 +4,19 @@
  * @param { (...args: any[]) => any } fn
  * @returns { (...args: any[]) => any }
  */
-function curry(fn) {
-  return function curried(...args) {
+function curry (fn) {
+  return function curried (...args) {
     if (args.length >= fn.length) {
-      return fn.apply(null, args);
+      return fn.apply(null, args)
     }
     return function (...args2) {
-      return curried.apply(null, args.concat(args2));
-    };
-  };
+      return curried.apply(null, args.concat(args2))
+    }
+  }
 }
 
-const join = (a, b, c) => `${a}_${b}_${c}`;
+const join = (a, b, c) => `${a}_${b}_${c}`
 
-const curriedJoin = curry(join);
+const curriedJoin = curry(join)
 
-module.exports = curriedJoin;
+export default curriedJoin

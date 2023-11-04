@@ -1,21 +1,24 @@
 {
     "env": {
         "browser": true,
-        "es6": true,
-        "node": true,
-        "jasmine": true
+        "es2021": true,
+        "node": true
     },
-    "extends": "airbnb-base",
-    "globals": {
-        "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
-    },
+    "extends": "standard-with-typescript",
     "parserOptions": {
-        "ecmaVersion": 2018,
+        "ecmaVersion": "latest",
         "sourceType": "module"
     },
-    "rules": {
-        "func-names":"off",
-        "prefer-arrow-callback":"off"
-    }
+    "rules": {},
+    "overrides": [
+        {
+            "files": [
+                "**.js", "*.ts"
+            ],
+            "rules": {
+                "@typescript-eslint/quotes": ["error", "double"],
+                "@typescript-eslint/no-extraneous-class": "off"
+            }
+        }
+    ]
 }

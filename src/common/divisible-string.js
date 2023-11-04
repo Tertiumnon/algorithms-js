@@ -28,24 +28,24 @@ to create both strings s and t.
 The length of the string u is 3, the integer value to return.
  */
 
-const findSmallest = (str) => {
-  const index = str.length / 2;
-  const part1 = str.slice(0, index);
-  const part2 = str.slice(index);
+const findSmallest = (str): string => {
+  const index = str.length / 2
+  const part1 = str.slice(0, index)
+  const part2 = str.slice(index)
   if (part1 === part2) {
-    return findSmallest(part1);
+    return findSmallest(part1)
   }
-  return str;
-};
+  return str
+}
 
-const divisibleString = (s, t) => {
-  const sLen = s.length;
-  const tLen = t.length;
+const divisibleString = (s, t): number => {
+  const sLen = s.length
+  const tLen = t.length
   if (sLen % tLen !== 0) {
-    return -1;
+    return -1
   }
-  const result = findSmallest(t);
-  return result.length;
-};
+  const result = findSmallest(t)
+  return result.length
+}
 
-module.exports = divisibleString;
+export default divisibleString

@@ -1,15 +1,15 @@
 /**
- * @param {number[]} nums
+ * @param {number[]} numbers
  * @param {number} k
- * @return {void} Do not return anything, modify nums in-place instead.
+ * @return {void} Do not return anything, modify numbers in-place instead.
  */
-const rotate = (nums, k) => {
-  let i = 0;
+const rotate = (numbers, k): void => {
+  let i = 0
   while (i < k) {
-    const lastEl = nums.pop();
-    nums.unshift(lastEl);
-    i += 1;
+    const lastEl = numbers.pop()
+    numbers.unshift(lastEl)
+    i += 1
   }
-};
+}
 
-module.exports = rotate;
+export default rotate

@@ -1,13 +1,13 @@
 /**
- * @param {number[]} nums
+ * @param {number[]} numbers
  * @return {number}
  */
-const pivotIndex = (nums) => {
-  const numsLen = nums.length;
-  for (let i = 0; i < numsLen; i += 1) {
-    const numsItem = nums[i];
+const pivotIndex = (numbers) => {
+  const numbersLen = numbers.length
+  for (let i = 0; i < numbersLen; i += 1) {
+    const numbersItem = numbers[i]
   }
-  return -1;
-};
+  return -1
+}
 
-module.exports = pivotIndex;
+export default pivotIndex

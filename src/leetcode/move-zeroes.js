@@ -1,25 +1,25 @@
 /* eslint-disable no-param-reassign */
 /**
- * @param {number[]} nums
- * @return {void} Do not return anything, modify nums in-place instead.
+ * @param {number[]} numbers
+ * @return {void} Do not return anything, modify numbers in-place instead.
  */
-const moveZeroes = (nums) => {
-  const itemsLen = nums.length;
+const moveZeroes = (numbers) => {
+  const itemsLen = numbers.length
   for (let i = 0, n = 1; n < itemsLen; i += 1) {
-    const item = nums[i];
+    const item = numbers[i]
     if (item === 0) {
-      let nItem = nums[n];
+      let nItem = numbers[n]
       while (nItem === 0 && n < itemsLen) {
-        n += 1;
-        nItem = nums[n];
+        n += 1
+        nItem = numbers[n]
       }
       if (nItem) {
-        nums[i] = nItem;
-        nums[n] = item;
+        numbers[i] = nItem
+        numbers[n] = item
       }
     }
-    n += 1;
+    n += 1
   }
-};
+}
 
-module.exports = moveZeroes;
+export default moveZeroes

@@ -11,26 +11,26 @@
  * @param {number} n
  * @return {string[]}
  */
-const fizzBuzz = (n) => {
-  const result = [];
-  let i = 1;
+const fizzBuzz = (n): string[] => {
+  const result = []
+  let i = 1
   while (i <= n) {
-    let r = '';
-    const b3 = i % 3 === 0;
-    const b5 = i % 5 === 0;
+    let r = ""
+    const b3 = i % 3 === 0
+    const b5 = i % 5 === 0
     if (b3 && b5) {
-      r += 'FizzBuzz';
+      r += "FizzBuzz"
     } else if (b3) {
-      r += 'Fizz';
+      r += "Fizz"
     } else if (b5) {
-      r += 'Buzz';
+      r += "Buzz"
     } else {
-      r = String(i);
+      r = String(i)
     }
-    result.push(r);
-    i += 1;
+    result.push(r)
+    i += 1
   }
-  return result;
-};
+  return result
+}
 
-module.exports = fizzBuzz;
+export default fizzBuzz

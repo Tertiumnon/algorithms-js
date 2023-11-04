@@ -1,8 +1,8 @@
-const pivotIndex = require('./pivot-index');
+const pivotIndex = require("./pivot-index")
 
-describe('testing pivotIndex', () => {
-  it('case 1', () => {
-    const result = pivotIndex();
-    expect(result).toEqual();
-  });
-});
+describe("testing pivotIndex", () => {
+  it("case 1", () => {
+    const result = pivotIndex()
+    expect(result).toEqual()
+  })
+})

@@ -1,19 +1,19 @@
 /**
- * @param {number[]} nums
+ * @param {number[]} numbers
  * @return {boolean}
  */
-const containsDuplicate = (nums) => {
-  const numsLen = nums.length;
-  nums.sort();
-  let prev = nums[0];
-  for (let i = 1; i < numsLen; i += 1) {
-    const item = nums[i];
+const containsDuplicate = (numbers) => {
+  const numbersLen = numbers.length
+  numbers.sort()
+  let prev = numbers[0]
+  for (let i = 1; i < numbersLen; i += 1) {
+    const item = numbers[i]
     if (item === prev) {
-      return true;
+      return true
     }
-    prev = item;
+    prev = item
   }
-  return false;
-};
+  return false
+}
 
-module.exports = containsDuplicate;
+export default containsDuplicate

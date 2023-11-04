@@ -1,25 +1,25 @@
 /**
- * @param {number[]} nums1
- * @param {number[]} nums2
+ * @param {number[]} numbers1
+ * @param {number[]} numbers2
  * @return {number[]}
  */
-const intersect = (nums1, nums2) => {
-  const nums1Len = nums1.length;
-  const nums2Len = nums2.length;
-  const usedY = [];
-  const nums1Link = nums1Len < nums2Len ? nums1 : nums2;
-  const nums2Link = nums1Len < nums2Len ? nums2 : nums1;
-  const nums1LinkLen = nums1Link.length;
-  const nums2LinkLen = nums2Link.length;
-  for (let i = 0; i < nums1LinkLen; i += 1) {
-    for (let y = 0; y < nums2LinkLen; y += 1) {
-      if (nums1Link[i] === nums2Link[y] && !usedY.includes(y)) {
-        usedY.push(y);
-        break;
+const intersect = (numbers1, numbers2) => {
+  const numbers1Len = numbers1.length
+  const numbers2Len = numbers2.length
+  const usedY = []
+  const numbers1Link = numbers1Len < numbers2Len ? numbers1 : numbers2
+  const numbers2Link = numbers1Len < numbers2Len ? numbers2 : numbers1
+  const numbers1LinkLen = numbers1Link.length
+  const numbers2LinkLen = numbers2Link.length
+  for (let i = 0; i < numbers1LinkLen; i += 1) {
+    for (let y = 0; y < numbers2LinkLen; y += 1) {
+      if (numbers1Link[i] === numbers2Link[y] && !usedY.includes(y)) {
+        usedY.push(y)
+        break
       }
     }
   }
-  return usedY.map((y) => nums2Link[y]);
-};
+  return usedY.map((y) => numbers2Link[y])
+}
 
-module.exports = intersect;
+export default intersect

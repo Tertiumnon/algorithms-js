@@ -1,6 +1,6 @@
-var reverse = function(x) {
-  const y = String(x).split('');
-  return y.reverse().join('');
-};
+const reverse = (x): string => {
+  const y = String(x).split("")
+  return y.reverse().join("")
+}
 
-console.log(reverse(123));
+console.log(reverse(123))

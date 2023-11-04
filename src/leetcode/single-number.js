@@ -1,17 +1,17 @@
 /**
- * @param {number[]} nums
+ * @param {number[]} numbers
  * @return {number}
  */
-const singleNumber = (nums) => {
-  const result = new Set();
-  nums.forEach((n) => {
+const singleNumber = (numbers): number => {
+  const result = new Set()
+  numbers.forEach((n) => {
     if (result.has(n)) {
-      result.delete(n);
+      result.delete(n)
     } else {
-      result.add(n);
+      result.add(n)
     }
-  });
-  return result.values().next().value;
-};
+  })
+  return result.values().next().value
+}
 
-module.exports = singleNumber;
+export default singleNumber

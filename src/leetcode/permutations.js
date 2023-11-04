@@ -24,27 +24,27 @@ Output:
 // };
 
 /**
- * @param {number[]} nums
+ * @param {number[]} numbers
  * @return {number[][]}
  */
-const permute = (nums) => {
-  let result = [];
-  if (nums.length === 1) {
-    return [nums];
+const permute = (numbers) => {
+  const result = []
+  if (numbers.length === 1) {
+    return [numbers]
   }
-  const left = nums[0];
-  const right = permute(nums.slice(1));
+  const left = numbers[0]
+  const right = permute(numbers.slice(1))
   for (let i = 0; i < right.length; i += 1) {
-    const rightLeft = right[i];
+    const rightLeft = right[i]
     for (let j = 0; j <= rightLeft.length; j += 1) {
-      const pre = rightLeft.slice(0, j);
-      const suf = rightLeft.slice(j);
+      const pre = rightLeft.slice(0, j)
+      const suf = rightLeft.slice(j)
       result.push(pre.concat([left], suf))
     }
   }
-  return result;
-};
+  return result
+}
 
-console.log(permute([1, 2, 3]));
+console.log(permute([1, 2, 3]))
 // console.log(permute([1, 2]));
 // console.log(permute([1]));
