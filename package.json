@@ -1,36 +1,18 @@
 {
   "name": "algorithms-js",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "create": "node create.js",
-    "cypress:open": "cypress open",
-    "cy:run": "cypress run",
-    "mocha": "ts-mocha -p src/tsconfig.json src/**/*.spec.ts"
-  },
-  "author": "Vit Tertiumnon",
-  "license": "ISC",
+  "version": "2.0.0",
+  "author": "Vitalii Balabanov",
+  "main": "index.ts",
   "devDependencies": {
-    "@types/mocha": "^10.0.3",
-    "@typescript-eslint/eslint-plugin": "^6.9.1",
-    "@typescript-eslint/parser": "^6.9.1",
-    "chai": "^4.3.10",
-    "cypress": "^13.4.0",
-    "eslint": "^8.52.0",
-    "eslint-config-standard": "^14.1.1",
-    "eslint-config-standard-with-typescript": "^39.1.1",
-    "eslint-plugin-import": "^2.29.0",
-    "eslint-plugin-n": "^16.2.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^6.1.1",
-    "eslint-plugin-standard": "^4.1.0",
-    "mocha": "^10.2.0",
-    "puppeteer": "^21.5.0",
-    "ts-mocha": "^10.0.0",
-    "typescript": "^5.2.2"
+    "@biomejs/biome": "1.9.4"
+  },
+  "description": "",
+  "license": "ISC",
+  "scripts": {
+    "create": "node create.js"
   },
   "dependencies": {
-    "ts-node": "^10.9.1"
+    "@types/bun": "^1.1.14",
+    "typescript": "^5.7.2"
   }
 }
