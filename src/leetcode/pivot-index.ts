@@ -1,7 +1,3 @@
-/**
- * @param {number[]} numbers
- * @return {number}
- */
 const pivotIndex = (numbers: number[]): number => {
 	const numbersLen = numbers.length;
 	let leftSum = 0;

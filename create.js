@@ -1,14 +1,14 @@
 /* eslint-disable no-console */
-const fs = require('fs');
+const fs = require('node:fs');
 
 // get name
 
 if (process.argv.length < 3) {
-  console.error('no arguments');
+  console.error('No valid arguments');
   process.exit(1);
 }
-const name = process.argv[2];
-const dir = process.argv[3];
+const dir = process.argv[2];
+const name = process.argv[3];
 
 const filename = name.replace(/[A-Z]/g, (letter) => `-${letter.toLowerCase()}`);
 
@@ -18,10 +18,10 @@ const fnContent = `const ${name} = () => {
   
 };
 
-module.exports = ${name};
+export default ${name};
 `;
 
-fs.writeFile(`./src/${dir}/${filename}.js`, fnContent, (err) => {
+fs.writeFile(`./src/${dir}/${filename}.ts`, fnContent, (err) => {
   if (err) {
     return console.error(err.message);
   }
@@ -30,17 +30,16 @@ fs.writeFile(`./src/${dir}/${filename}.js`, fnContent, (err) => {
 
 // create spec
 
-const specContent = `const ${name} = require('./${filename}');
+const specContent = `import { test, expect } from "bun:test";
+import ${name} from './${filename}';
 
-describe('testing ${name}', () => {
-  it('case 1', () => {
-    const result = ${name}();
-    expect(result).toEqual();
-  });
+test('case 1', () => {
+  const result = ${name}();
+  expect(result).toEqual();
 });
 `;
 
-fs.writeFile(`./src/${dir}/${filename}.spec.js`, specContent, (err) => {
+fs.writeFile(`./src/${dir}/${filename}.spec.ts`, specContent, (err) => {
   if (err) {
     return console.error(err.message);
   }
